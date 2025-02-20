@@ -1,0 +1,5 @@
+@import "tailwindcss";
+@source "../../lib/**/*.*ex";
+@theme {
+    --color-brand: #df573d;
+}

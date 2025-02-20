@@ -1,0 +1,32 @@
+<div class="flex justify-center my-4">
+  <div class="bg-white rounded-lg shadow p-4">
+    <img src={~p"/images/logo.png"} alt="MarketUp" class="w-64" />
+  </div>
+</div>
+<div class="grid grid-cols-2 items-center justify-center px-12">
+  <div class="flex flex-col gap-2 justify-center items-center">
+    <p class="text-5xl text-center font-bold">Μπες στην κλήρωση για ένα iPhone</p>
+    <p class="text-4xl text-center font-medium">Κούνα το κινητό σου και κέρδισε!</p>
+    <img src={~p"/images/shake.png"} class="size-[600px]" />
+  </div>
+  <div class="flex flex-col justify-center gap-8 items-center">
+    <div class="text-center">
+      <h1 class="text-4xl font-bold mb-8">ΤΟΠ ΣΚΟΡ</h1>
+      <div class="bg-white text-brand rounded-lg shadow-lg w-128 divide-y divide-y-4 divide-brand">
+        <div
+          :for={{game, i} <- Enum.with_index(@games)}
+          class="flex justify-between text-2xl px-4 py-2"
+        >
+          <div>{i + 1}.</div>
+          <div class="font-bold">{game && game.name}</div>
+          <div class="font-bold">{game && game.score}</div>
+        </div>
+      </div>
+    </div>
+    <.form for={%{}} method="POST" action="/board/new">
+      <button class="bg-white rounded px-2 py-4 w-64 shadow cursor-pointer font-medium text-3xl text-brand">
+        Νέο παιχνίδι
+      </button>
+    </.form>
+  </div>
+</div>
