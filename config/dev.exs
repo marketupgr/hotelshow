@@ -19,9 +19,7 @@ config :game, GameWeb.Endpoint,
   code_reloader: true,
   debug_errors: true,
   secret_key_base: "WtA2jTpMHRY4Ia3nhnfo//J5Z2OXUMi5cYhcC2fZlFcjVxH7Z/9s4rYstAb3EEOl",
-  watchers: [
-    bun: ["--cwd", "assets", "vite", "build", "--watch", "--mode", "development"]
-  ]
+  watchers: []
 
 # Watch static and templates for browser reloading.
 config :game, GameWeb.Endpoint,

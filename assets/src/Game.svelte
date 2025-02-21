@@ -6,7 +6,7 @@
     start();
 
     const ACCELERATION_THRESHOLD = 20;
-    const TIME_WINDOW = 120;
+    const TIME_WINDOW = 100;
     let lastEventTime = 0;
 
     window.addEventListener('devicemotion', (event) => {

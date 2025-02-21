@@ -22,12 +22,16 @@ defmodule GameWeb.GameLive do
     />
     <div id="hook" phx-hook="GameHook" phx-update="ignore" />
     <div class="grid place-items-center h-screen w-full">
-      <div :if={@state == :started} class="text-6xl font-bold text-white">{@score}</div>
+      <div :if={@state == :started} class="flex flex-col items-center justify-center">
+        <img src={~p"/images/shake.png"} />
+        <p class="text-7xl text-center font-bold mb-[60%]">{@score}</p>
+        <p class="text-4xl text-center font-bold mb-auto">SHAKE!</p>
+      </div>
       <div :if={@state == :ended} class="text-white">
         <form phx-submit="save_game" class="flex flex-col w-64 justify-center gap-4 items-center">
           <div class="text-center">
             <p class="text-4xl font-medium">ΤΕΛΙΚΟ ΣΚΟΡ</p>
-            <p class="text-5xl font-bold">{@score}</p>
+            <p class="text-7xl font-bold">{@score}</p>
           </div>
           <label class="font-medium space-y-1">
             Email
